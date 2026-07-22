@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Instrument_Serif } from 'next/font/google';
-import StageSelector from './stage-selector';
+import ApplicationCard from './application-card';
 
 // The design uses "TWK Lausanne" (not freely available) for body text — we fall
 // back to the app's Geist/system sans. "Instrument Serif" italic is used for the
@@ -117,33 +117,8 @@ export default function ApplicationLanding() {
             </figure>
           </div>
 
-          {/* Right column — application card */}
-          <div className="flex w-full max-w-[466px] flex-col justify-between gap-8 rounded-3xl bg-[#2a4248] p-8">
-            <div className="flex flex-col gap-8">
-              <div className="flex flex-col gap-3">
-                <p className="text-[14px] font-light leading-[1.4] text-white/70">
-                  Apply today
-                </p>
-                <p className="text-[24px] font-semibold leading-tight text-white">
-                  What stage is your organization in?
-                </p>
-              </div>
-
-              <StageSelector />
-            </div>
-
-            <div className="flex items-center justify-between">
-              <span className="rounded-full bg-[#2e4c54] px-3 py-2 text-[14px] tracking-[0.14px] text-white/70">
-                Takes ~5 minutes
-              </span>
-              <Link
-                href="/apply"
-                className="rounded-lg bg-[#e2f1e7] px-5 py-3 text-[18px] text-[#263c42] transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d2b4fe] focus-visible:ring-offset-2 focus-visible:ring-offset-[#263c42]"
-              >
-                Start application
-              </Link>
-            </div>
-          </div>
+          {/* Right column — application card (client: routes New vs Existing) */}
+          <ApplicationCard />
         </div>
       </section>
 
@@ -182,12 +157,12 @@ export default function ApplicationLanding() {
           </div>
 
           <div className="mt-16 flex flex-col items-center gap-4">
-            <Link
-              href="/apply"
+            <a
+              href="#apply"
               className="rounded-lg bg-[#304c54] px-5 py-3 text-[18px] text-[#fefefe] transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d2b4fe] focus-visible:ring-offset-2 focus-visible:ring-offset-[#263c42]"
             >
               Apply now
-            </Link>
+            </a>
             <p className="text-[14px] tracking-[0.14px] text-black/50">
               Takes ~5 minutes
             </p>
@@ -388,12 +363,12 @@ export default function ApplicationLanding() {
               before the first call. It takes about ten minutes.
             </p>
           </div>
-          <Link
-            href="/apply"
+          <a
+            href="#apply"
             className="rounded-lg bg-[#e2f1e7] px-5 py-3 text-[18px] text-[#263c42] transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d2b4fe] focus-visible:ring-offset-2 focus-visible:ring-offset-[#263c42]"
           >
             Apply in 5 minutes
-          </Link>
+          </a>
         </div>
       </section>
 

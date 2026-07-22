@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Slightly tighten default character spacing across the app; Tailwind tracking
+   utilities still override this per element where the design needs it. */
+body {
+  letter-spacing: -0.015em;
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -193,7 +193,7 @@ export default function ApplyWizard() {
         </Link>
       </header>
 
-      <div className="mx-auto flex w-full max-w-[463px] flex-col items-center gap-9 px-6 pt-24">
+      <div className="mx-auto flex w-full max-w-[463px] flex-col items-center gap-9 px-6 pb-20 pt-24">
         {/* Progress + title */}
         <div className="flex w-full flex-col items-center gap-6">
           <Progress current={step + 1} total={TOTAL} />
