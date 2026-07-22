@@ -296,12 +296,14 @@ export default function ApplicationLanding() {
                   </div>
                 </div>
                 {/* magnifier over the values column: dimmed figures show through, magnified $8% on top */}
-                <div className="absolute left-[192px] top-[100px] h-[160px] w-[168px]">
-                  {/* handle (points down-right, past the card edge) */}
-                  <span className="absolute left-[102px] top-[106px] h-[60px] w-[16px] origin-top rotate-[-45deg] rounded-full bg-[#1a2b32]" />
+                <div className="absolute left-[198px] top-[100px] h-[200px] w-[214px]">
+                  {/* dark handle */}
+                  <span className="absolute left-[120px] top-[112px] h-[54px] w-[17px] origin-top rotate-[-52deg] rounded-[3px] bg-[#1a2b32]" />
+                  {/* grey ferrule between lens and handle */}
+                  <span className="absolute left-[105px] top-[99px] h-[20px] w-[12px] origin-top rotate-[-52deg] rounded-[2px] bg-[#d7d7d7]" />
                   {/* lens */}
-                  <div className="absolute left-0 top-0 grid h-[128px] w-[128px] place-items-center rounded-full border-[3px] border-white/80 bg-[#2c464d]/65">
-                    <span className="text-[26px] font-bold text-white">$8%</span>
+                  <div className="absolute left-0 top-0 grid h-[126px] w-[126px] place-items-center rounded-full border-[3px] border-[#d7d7d7] bg-[#2c464d]/50">
+                    <span className="text-[28px] font-bold text-white">$8%</span>
                   </div>
                 </div>
                 </div>
