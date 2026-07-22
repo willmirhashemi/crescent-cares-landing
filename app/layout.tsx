@@ -1,6 +1,10 @@
 import './globals.css';
 
-import { GeistSans } from 'geist/font/sans';
+import { Inter } from 'next/font/google';
+
+// TWK Lausanne (the Figma font) isn't freely available; Inter is the closest
+// free neo-grotesque match. Applied globally as the app's default font.
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 let title = 'Next.js + Postgres Auth Starter';
 let description =
@@ -24,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.variable}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

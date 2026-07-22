@@ -55,7 +55,7 @@ export default function ApplicationLanding() {
           <div className="flex w-full max-w-[539px] flex-col justify-between gap-12">
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-5">
-                <h1 className="text-[40px] font-semibold leading-[1.05] text-white sm:text-[54px]">
+                <h1 className="text-[40px] font-semibold leading-[1.05] tracking-[-0.015em] text-white sm:text-[54px]">
                   Find the <Accent>right fiscal sponsor</Accent> for your
                   mission.
                 </h1>
@@ -136,12 +136,12 @@ export default function ApplicationLanding() {
               <span className="rounded-full bg-[#2e4c54] px-3 py-2 text-[14px] tracking-[0.14px] text-white/70">
                 Takes ~5 minutes
               </span>
-              <button
-                type="button"
-                className="rounded-lg bg-[#e2f1e7] px-5 py-3 text-[18px] text-[#263c42] transition-opacity hover:opacity-90"
+              <Link
+                href="/apply"
+                className="rounded-lg bg-[#e2f1e7] px-5 py-3 text-[18px] text-[#263c42] transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d2b4fe] focus-visible:ring-offset-2 focus-visible:ring-offset-[#263c42]"
               >
                 Start application
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function ApplicationLanding() {
         <div className="mx-auto w-full max-w-[1152px] px-6 sm:px-10">
           <div className="mx-auto flex max-w-[500px] flex-col items-center gap-5 text-center">
             <p className="text-[12px] text-[#1a2b32]">How it works</p>
-            <h2 className="text-[36px] font-semibold leading-[1.05] sm:text-[48px]">
+            <h2 className="text-[36px] font-semibold leading-[1.05] tracking-[-0.015em] sm:text-[48px]">
               Get matched in hours, not weeks.
             </h2>
           </div>
@@ -182,12 +182,12 @@ export default function ApplicationLanding() {
           </div>
 
           <div className="mt-16 flex flex-col items-center gap-4">
-            <button
-              type="button"
-              className="rounded-lg bg-[#304c54] px-5 py-3 text-[18px] text-[#fefefe] transition-opacity hover:opacity-90"
+            <Link
+              href="/apply"
+              className="rounded-lg bg-[#304c54] px-5 py-3 text-[18px] text-[#fefefe] transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d2b4fe] focus-visible:ring-offset-2 focus-visible:ring-offset-[#263c42]"
             >
               Apply now
-            </button>
+            </Link>
             <p className="text-[14px] tracking-[0.14px] text-black/50">
               Takes ~5 minutes
             </p>
@@ -198,15 +198,16 @@ export default function ApplicationLanding() {
       {/* ===================== WHY PROJECTS ===================== */}
       <section className="py-24">
         <div className="mx-auto w-full max-w-[1152px] px-6 sm:px-10">
-          <h2 className="max-w-[480px] text-[40px] font-semibold leading-[1.05] text-white sm:text-[54px]">
-            Why projects <Accent>acheive more</Accent> with us
+          <h2 className="max-w-[480px] text-[40px] font-semibold leading-[1.05] tracking-[-0.015em] text-white sm:text-[54px]">
+            Why projects <Accent>achieve more</Accent> with us
           </h2>
 
           <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-3">
             {/* Card 1 — matches */}
             <article className="flex flex-col gap-5">
-              <div className="relative h-[322px] overflow-hidden rounded-xl bg-[#2a4248]">
-                <div className="absolute left-9 top-8 flex w-[247px] items-center gap-3 rounded-lg bg-[#263c42] px-4 py-3">
+              <div className="flex h-[322px] justify-center overflow-hidden rounded-xl bg-[#2a4248]">
+                <div className="relative h-full w-[357px] shrink-0">
+                <div className="absolute left-9 top-[33px] flex w-[247px] items-center gap-3 rounded-lg bg-[#263c42] px-4 py-3">
                   <img
                     src="/crescent/file-text.svg"
                     alt=""
@@ -233,7 +234,7 @@ export default function ApplicationLanding() {
                 ].map((row) => (
                   <div key={row.name}>
                     <div className={`absolute left-[116px] ${row.top} flex w-[219px] items-center rounded-lg bg-[#2e4c54] px-4 py-3`}>
-                      <div className="flex flex-col gap-2 text-center">
+                      <div className="flex flex-col gap-2 text-left">
                         <p className="whitespace-nowrap text-[14px] text-white">
                           {row.name}
                         </p>
@@ -250,6 +251,7 @@ export default function ApplicationLanding() {
                     </span>
                   </div>
                 ))}
+                </div>
               </div>
               <div className="flex flex-col gap-3">
                 <p className="text-[18px] text-[#fefefe]">
@@ -264,7 +266,8 @@ export default function ApplicationLanding() {
 
             {/* Card 2 — real cost */}
             <article className="flex flex-col gap-5">
-              <div className="relative h-[322px] overflow-hidden rounded-xl bg-[#2a4248]">
+              <div className="flex h-[322px] justify-center overflow-hidden rounded-xl bg-[#2a4248]">
+                <div className="relative h-full w-[357px] shrink-0">
                 <div className="absolute left-9 top-[53px] flex w-[268px] flex-col gap-3 rounded-xl bg-[#2c464d] p-2">
                   <div className="flex flex-col gap-3 p-2">
                     <div className="flex flex-col gap-2 leading-[1.3]">
@@ -292,15 +295,15 @@ export default function ApplicationLanding() {
                     Confirm
                   </div>
                 </div>
-                {/* magnifier */}
-                <div className="absolute left-[222px] top-[122px] flex h-24 w-24 items-center justify-center">
-                  <span className="absolute h-[69px] w-[69px] rotate-[-56deg] rounded-full bg-[#d7d7d7]" />
-                  <span className="absolute left-[85px] top-[70px] h-11 w-3 rotate-[-56deg] rounded-sm bg-[#1a2b32]" />
-                  <img
-                    src="/crescent/ellipse15.svg"
-                    alt=""
-                    className="absolute left-[15px] top-[15px] h-[66px] w-[66px]"
-                  />
+                {/* magnifier over the values column: dimmed figures show through, magnified $8% on top */}
+                <div className="absolute left-[192px] top-[100px] h-[160px] w-[168px]">
+                  {/* handle (points down-right, past the card edge) */}
+                  <span className="absolute left-[102px] top-[106px] h-[60px] w-[16px] origin-top rotate-[-45deg] rounded-full bg-[#1a2b32]" />
+                  {/* lens */}
+                  <div className="absolute left-0 top-0 grid h-[128px] w-[128px] place-items-center rounded-full border-[3px] border-white/80 bg-[#2c464d]/65">
+                    <span className="text-[26px] font-bold text-white">$8%</span>
+                  </div>
+                </div>
                 </div>
               </div>
               <div className="flex flex-col gap-3">
@@ -314,7 +317,8 @@ export default function ApplicationLanding() {
 
             {/* Card 3 — match reasoning */}
             <article className="flex flex-col gap-5">
-              <div className="relative h-[322px] overflow-hidden rounded-xl bg-[#2a4248]">
+              <div className="flex h-[322px] justify-center overflow-hidden rounded-xl bg-[#2a4248]">
+                <div className="relative h-full w-[357px] shrink-0">
                 <div className="absolute left-1/2 top-7 flex w-[294px] -translate-x-1/2 flex-col gap-3 rounded-lg bg-[#2e4c54] p-5">
                   <div className="flex flex-col gap-2 text-center">
                     <p className="text-[12px] font-light text-white/50">
@@ -354,6 +358,7 @@ export default function ApplicationLanding() {
                     ))}
                   </div>
                 </div>
+                </div>
               </div>
               <div className="flex flex-col gap-3">
                 <p className="text-[18px] text-[#fefefe]">
@@ -373,7 +378,7 @@ export default function ApplicationLanding() {
       <section className="pb-24 pt-8">
         <div className="mx-auto flex w-full max-w-[539px] flex-col items-center gap-8 px-6 text-center">
           <div className="flex flex-col items-center gap-5">
-            <h2 className="text-[40px] font-semibold leading-[1.05] text-white sm:text-[54px]">
+            <h2 className="text-[40px] font-semibold leading-[1.05] tracking-[-0.015em] text-white sm:text-[54px]">
               Your mission <Accent>deserves</Accent> the right sponsor.
             </h2>
             <p className="max-w-[480px] text-[18px] leading-[1.4] text-white/70">
@@ -381,12 +386,12 @@ export default function ApplicationLanding() {
               before the first call. It takes about ten minutes.
             </p>
           </div>
-          <button
-            type="button"
-            className="rounded-lg bg-[#e2f1e7] px-5 py-3 text-[18px] text-[#263c42] transition-opacity hover:opacity-90"
+          <Link
+            href="/apply"
+            className="rounded-lg bg-[#e2f1e7] px-5 py-3 text-[18px] text-[#263c42] transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d2b4fe] focus-visible:ring-offset-2 focus-visible:ring-offset-[#263c42]"
           >
             Apply in 5 minutes
-          </button>
+          </Link>
         </div>
       </section>
 
